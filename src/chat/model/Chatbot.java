@@ -49,7 +49,7 @@ public class Chatbot
 	{
 		movieList.add("Alien");
 		movieList.add("Spiderman");
-		movieList.add("Star Wars, but not the prequels");
+		movieList.add("Friday The 13th");
 		movieList.add("Hidden Figures");
 	}
 	
