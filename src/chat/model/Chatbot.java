@@ -47,10 +47,15 @@ public class Chatbot
 
 	private void buildMovieList()
 	{
-		movieList.add("Alien");
-		movieList.add("Spiderman");
-		movieList.add("Friday The 13th");
-		movieList.add("Hidden Figures");
+		Movie Alien = new Movie("Alien");
+		Movie Spiderman = new Movie("Spiderman");
+		Movie StarWars = new Movie("Star Wars");
+		Movie HiddenFigures = new Movie("Hidden Figures");
+		
+		movieList.add(Alien);
+		movieList.add(Spiderman);
+		movieList.add(StarWars);
+		movieList.add(HiddenFigures);
 	}
 	
 	private void buildShoppingList()
@@ -63,10 +68,15 @@ public class Chatbot
 	
 	private void buildCuteAnimals()
 	{
-		cuteAnimals.add("doge");
-		cuteAnimals.add("puppers");
-		cuteAnimals.add("doggo");
-		cuteAnimals.add("good boyes");
+		cuteAnimals doge = new cuteAnimals("doge");
+		cuteAnimals puppers = new cuteAnimals("puppers");
+		cuteAnimals doggo = new cuteAnimals("doggo");
+		cuteAnimals goodboyes = new cuteAnimals("good boyes");
+		
+		cuteAnimals.add(doge);
+		cuteAnimals.add(puppers);
+		cuteAnimals.add(doggo);
+		cuteAnimals.add(goodboyes);
 	}
 	
 	private void buildQuestions()
@@ -95,6 +105,16 @@ public class Chatbot
 				
 		random = (int) (Math.random() * questions.length);
 		response += questions[random];
+		
+		random = (int) (Math.random() * 2);
+		
+		if (random % 2 == 0)
+		{
+			random = (int) (Math.random() * movieList.size());
+			response += movieList.get(random).getTitle() + " is a great movie";
+		}
+		
+		
 		
 		return response;
 	}
