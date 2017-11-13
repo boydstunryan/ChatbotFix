@@ -83,6 +83,11 @@ public class Chatbot
 	{
 		
 	}
+	/**
+	 * Takes the user input and combines with a generated response and returns it.
+	 * @param input The users supplied text
+	 * @return
+	 */
 	
 	public String processConversation(String input)
 	{
