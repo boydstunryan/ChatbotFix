@@ -37,7 +37,7 @@ public class ChatbotController
 		
 		if(chatbot.quitChecker(input))
 		{
-			
+			close();
 		}
 		
 		chatbotSays += chatbot.processConversation(input);
