@@ -55,8 +55,25 @@ public class ChatbotController
 	{
 		String chatbotSays= ""; //Assigns a valid value that will be returned for 
 		
-		chatbotSats += chatbot.processConversation(chat);
+		chatbotSays += chatbot.processConversation(chat);
 		
 		return chatbotSays;
+	}
+	
+	public String useCheckers(String text)
+	{
+		String response = "";
+		
+		if(chatbot.contentChecker(text))
+		{
+			response += "This text matches the special content\n";
+		}
+		if(chatbot.cuteAnimalMemeChecker(text))
+		{
+			response += "";
+		}
+		//continue with all checkers except length and quit checker
+		
+		return response;
 	}
 }

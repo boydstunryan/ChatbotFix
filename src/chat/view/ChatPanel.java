@@ -2,6 +2,7 @@ package chat.view;
 
 import javax.swing.JPanel;
 import javax.swing.JButton;
+import javax.swing.AbstractButton;
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
 import javax.swing.SpringLayout;
@@ -71,5 +72,17 @@ public class ChatPanel extends JPanel
 					inputField.setText("");
 				}
 		});	
+		
+		AbstractButton checkerButton = null;
+		checkerButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				String userText = inputField.getText();
+				String displayText = appController.useCheckers(userText);
+				chatArea.append(displayText);
+				inputField.setText("");
+			}
+		});
 	}
 }

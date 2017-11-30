@@ -116,13 +116,27 @@ public class Chatbot
 		if (random % 2 == 0)
 		{
 			random = (int) (Math.random() * movieList.size());
-			response += movieList.get(random).getTitle() + " is a great movie";
+			response += "\n" + movieList.get(random).getTitle() + " is a great movie";
 		}
 		
+		int followup = (int) (Math.random() * movieList.size());
 		
-		
-		return response;
+		switch (followup)
+		{
+		case 0:
+			response += followUps[0] + "\n";
+			break;
+		case 3:
+			response += followUps[1] + "\n";
+		case 1:
+			response += followUps[4] + "\n";
+		default:
+			response += followUps[4] + "\n";
+			response += followUps[3] + "\n";
+			break; 
+		}
 	}
+	
 	
 	public boolean lengthChecker(String input)
 	{
