@@ -21,8 +21,8 @@ public class Chatbot
 	public Chatbot(String username)
 	{
 		this.movieList = new ArrayList<Movie>();
-		this.shoppingList = null;
-		this.cuteAnimalMemes = null;
+		this.shoppingList = new ArrayList<String>();
+		this.cuteAnimalMemes = new ArrayList<String>();
 		this.currentTime = null;
 		this.questions = null;
 		this.username = null;
@@ -68,15 +68,10 @@ public class Chatbot
 	
 	private void buildCuteAnimals()
 	{
-		cuteAnimals doge = new cuteAnimals("doge");
-		cuteAnimals puppers = new cuteAnimals("puppers");
-		cuteAnimals doggo = new cuteAnimals("doggo");
-		cuteAnimals goodboyes = new cuteAnimals("good boyes");
-		
-		cuteAnimals.add(doge);
-		cuteAnimals.add(puppers);
-		cuteAnimals.add(doggo);
-		cuteAnimals.add(goodboyes);
+		cuteAnimalMemes.add("doge");
+		cuteAnimalMemes.add("puppers");
+		cuteAnimalMemes.add("doggo");
+		cuteAnimalMemes.add("goodboyes");
 	}
 	
 	private void buildQuestions()
