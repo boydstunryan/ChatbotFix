@@ -96,12 +96,12 @@ public class Chatbot
 	private String buildChatbotResponse()
 	{
 		String response = "I ";
-		int random = Math.random() * verbs.length;
+		int random = (int)(Math.random() * verbs.length);
 		
 		response += verbs[random];
 		
 		random = (int) (Math.random() * topics.length);
-		response += " " + topics[random] + ".\n"
+		response += " " + topics[random] + ".\n";
 				
 		random = (int) (Math.random() * questions.length);
 		response += questions[random];
